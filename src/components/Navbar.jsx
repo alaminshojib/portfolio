@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <nav className="bg-gray-900 p-4 shadow-lg fixed w-full">
-      <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-white text-2xl font-bold">My Portfolio</h1>
+    <nav className="bg-gray-600 p-4">
+      <div className="container mx-auto flex justify-between items-center ">
+        <h1 className="text-white text-2xl font-bold">MD. Al-AMIN's Portfolio</h1>
         <ul className="flex space-x-6">
           <li><Link className="text-white hover:text-gray-400" to="/">Home</Link></li>
           <li><Link className="text-white hover:text-gray-400" to="/skills">Skills</Link></li>

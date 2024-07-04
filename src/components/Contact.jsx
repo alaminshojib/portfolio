@@ -25,9 +25,9 @@ function Contact() {
   };
 
   return (
-    <section className="contact py-20 bg-gray-100 text-center">
+    <section className="contact py-20  text-center">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold mb-8">Contact</h2>
+        <h2 className="text-3xl text-white font-bold mb-8">Contact</h2>
         <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
           <div className="mb-4">
             <input

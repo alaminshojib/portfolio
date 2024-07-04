@@ -6,9 +6,9 @@ import profilePic from "../assets/pic.jpg"; // Add your profile picture here
 function Home() {
   return (
     <section className="home text-center py-20  text-white">
-      <div className="container mx-auto flex items-center justify-around">
-        <div>
-          <h1 className="text-5xl font-bold mb-4">John Doe</h1>
+      <div className="container mx-auto mt-10 flex items-center justify-around">
+        <div className="items-start text-left">
+          <h1 className="text-5xl font-bold mb-4">MD. AL-AMIN</h1>
           <h2 className="text-3xl mb-6">
             <Typewriter
               words={[
@@ -24,7 +24,7 @@ function Home() {
               delaySpeed={1000}
             />
           </h2>
-          <p className="text-xl mb-6 max-w-lg mx-auto">
+          <p className="text-xl mt-16 mb-6 max-w-lg mx-auto">
             Experienced developer with expertise in React, Node.js, and more. I
             build scalable and efficient web applications.
           </p>
@@ -40,7 +40,7 @@ function Home() {
           <img
             src={profilePic}
             alt="Profile"
-            className="w-60 h-60 rounded-full mb-4 border-4 border-white shadow-lg"
+            className="w-72 h-72 rounded-full mb-4 border-4 border-white shadow-lg"
           />
 
           <div className="social-icons flex justify-center mt-6 space-x-4">

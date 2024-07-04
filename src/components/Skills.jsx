@@ -8,18 +8,18 @@ function Skills() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="skills py-20 bg-gradient-to-r from-blue-500 to-teal-500 text-white"
+      className="skills py-20  text-white"
     >
       <div className="container mx-auto">
-        <h2 className="text-4xl font-bold mb-12">Skills</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <h2 className="text-4xl text-center font-bold mb-12">Skills</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-center">
           <motion.div
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg"
           >
             <h3 className="text-2xl font-bold mb-6 text-white">Technical Skills</h3>
-            <ul className="text-lg text-left">
+            <ul className="text-lg">
               <motion.li
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}

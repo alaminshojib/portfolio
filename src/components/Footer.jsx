@@ -2,12 +2,12 @@ import React from 'react';
 
 function Footer() {
   return (
-    <footer className="bg-gray-900 text-white p-4 text-center">
-      <p>&copy; 2023 John Doe. All Rights Reserved.</p>
+    <footer className="bg-gray-600  text-white p-4 text-center">
+      <p>&copy; 2023 Md. Al-Amin. All Rights Reserved.</p>
       <div className="social-links mt-2">
-        <a href="https://linkedin.com/in/your-profile" className="text-blue-400 mx-2">LinkedIn</a>
-        <a href="https://github.com/your-profile" className="text-gray-400 mx-2">GitHub</a>
-        <a href="https://facebook.com/your-profile" className="text-blue-600 mx-2">Facebook</a>
+        <a href="https://linkedin.com/in/anisurrahmanalamin" className="text-blue-600 mx-2">LinkedIn</a>
+        <a href="https://www.instagram.com/Anisur.Rahman.AlAmin.s" className="text-blue-600 mx-2">GitHub</a>
+        <a href="https://www.facebook.com/Anisur.Rahman.AlAmin.s" className="text-blue-600 mx-2">Facebook</a>
       </div>
     </footer>
   );

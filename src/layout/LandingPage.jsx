@@ -8,7 +8,7 @@ import Contact from '../components/Contact';
 
 const LandingPage = () => {
     return (
-        <div className='bg-gray-900'>
+        <div className='px-10 bg-gray-900'>
             <Home></Home>
             <Skills></Skills>
             <Experience></Experience>

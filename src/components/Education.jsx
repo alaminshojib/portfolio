@@ -1,41 +1,66 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 function Education() {
   const educations = [
     {
-      degree: "Bachelor of Science in Computer Science",
-      institution: "University of Example",
-      details: "Graduated with honors. Specialized in software engineering and computer systems."
+      degree: "Bachelor of Science in Animal Husbandry",
+      institution: "Bangladesh Agricultural University",
+      details: "Graduated with honors. Specialized in Animal management and treatment related"
     },
     {
-      degree: "Master of Business Administration (MBA)",
-      institution: "Business School of Example",
-      details: "Focused on strategic management and entrepreneurship. Achieved highest GPA in cohort."
+      degree: "Higher Secondary School Certificate",
+      institution: "Qadirabad Cantonment Sapper College",
+      details: "Focused on strategic Science. Achieved highest GPA in cohort."
     },
     {
-      degree: "Diploma in Web Development",
-      institution: "Tech Institute of Example",
-      details: "Hands-on training in front-end and back-end development. Developed several projects."
+      degree: "Secondary School Certificate",
+      institution: "S.M. Model School & College",
+      details: "Hands-on Secondary academic study"
     }
   ];
 
-  return (
-    <section className="education py-20 bg-white text-center">
-      <div className="container mx-auto">
-        <h2 className="text-3xl font-bold mb-8">Education</h2>
+  const containerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        staggerChildren: 0.2,
+      }
+    }
+  };
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
+
+  return (
+    <motion.section
+      className="education py-20 bg-gray-900 text-center"
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
+      <div className="container mx-auto">
+        <h2 className="text-4xl text-white font-bold mb-12">Education</h2>
+
+        <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {educations.map((edu, index) => (
-            <div key={index} className="degree bg-gray-100 rounded-lg shadow-md p-6">
+            <motion.div
+              key={index}
+              className="degree bg-gray-100 rounded-lg shadow-md p-6"
+              variants={itemVariants}
+            >
               <h3 className="text-xl font-semibold mb-2">{edu.degree}</h3>
               <h4 className="text-lg text-gray-600 mb-4">{edu.institution}</h4>
               <p className="text-gray-700">{edu.details}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
-
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 
