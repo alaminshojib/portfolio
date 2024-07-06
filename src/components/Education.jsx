@@ -6,17 +6,20 @@ function Education() {
     {
       degree: "Bachelor of Science in Animal Husbandry",
       institution: "Bangladesh Agricultural University",
-      details: "Graduated with honors. Specialized in Animal management and treatment related"
+      details: "Graduated with honors. Specialized in animal management and treatment.",
+      duration: "2018 - 2022"
     },
     {
       degree: "Higher Secondary School Certificate",
       institution: "Qadirabad Cantonment Sapper College",
-      details: "Focused on strategic Science. Achieved highest GPA in cohort."
+      details: "Focused on strategic Science. Achieved highest GPA in cohort.",
+      duration: "2016 - 2018"
     },
     {
       degree: "Secondary School Certificate",
       institution: "S.M. Model School & College",
-      details: "Hands-on Secondary academic study"
+      details: "Completed secondary academic study with hands-on learning.",
+      duration: "2014 - 2016"
     }
   ];
 
@@ -38,7 +41,7 @@ function Education() {
 
   return (
     <motion.section
-      className="education py-20 bg-gray-900 text-center"
+      className="education py-20 px-10 bg-gray-900 text-center"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
@@ -50,12 +53,13 @@ function Education() {
           {educations.map((edu, index) => (
             <motion.div
               key={index}
-              className="degree bg-gray-100 rounded-lg shadow-md p-6"
+              className="degree bg-gray-800 text-white rounded-lg shadow-md p-6"
               variants={itemVariants}
             >
-              <h3 className="text-xl font-semibold mb-2">{edu.degree}</h3>
-              <h4 className="text-lg text-gray-600 mb-4">{edu.institution}</h4>
-              <p className="text-gray-700">{edu.details}</p>
+              <h3 className="text-2xl font-semibold mb-2">{edu.degree}</h3>
+              <h4 className="text-xl text-gray-400 mb-2">{edu.institution}</h4>
+              <span className="text-gray-500 block mb-4">{edu.duration}</span>
+              <p className="text-gray-300">{edu.details}</p>
             </motion.div>
           ))}
         </motion.div>

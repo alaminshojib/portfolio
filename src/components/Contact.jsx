@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import { motion } from 'framer-motion';
+import { MdEmail } from 'react-icons/md'; // Importing email icon from react-icons
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -25,9 +27,14 @@ function Contact() {
   };
 
   return (
-    <section className="contact py-20  text-center">
+    <motion.section
+      className="contact py-10 bg-gray-900 text-white"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+    >
       <div className="container mx-auto">
-        <h2 className="text-3xl text-white font-bold mb-8">Contact</h2>
+        <h2 className="text-4xl text-center font-bold mb-8">Contact Information</h2>
         <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
           <div className="mb-4">
             <input
@@ -58,15 +65,17 @@ function Contact() {
               onChange={handleChange}
             ></textarea>
           </div>
-          <button
+          <motion.button
             type="submit"
-            className="w-full bg-blue-500 text-white py-2 px-4 rounded"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="w-full bg-blue-500 text-white py-3 px-6 rounded-lg shadow-md flex items-center justify-center"
           >
-            Send Message
-          </button>
+            Send Message <MdEmail className="ml-2 text-xl" />
+          </motion.button>
         </form>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

@@ -1,5 +1,7 @@
 import React from 'react';
-import { FaCheck } from 'react-icons/fa'; // Importing icons from react-icons library
+import { FaCheck, FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaGitAlt } from 'react-icons/fa'; // Importing icons from react-icons library
+import { IoLogoJavascript } from 'react-icons/io'; // Importing JavaScript icon
+import { FiUsers, FiMessageCircle, FiSettings } from 'react-icons/fi'; // Importing icons for soft skills
 import { motion } from 'framer-motion'; // Importing motion from framer-motion for animations
 
 function Skills() {
@@ -8,7 +10,7 @@ function Skills() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="skills py-20  text-white"
+      className="skills p-10 text-white"
     >
       <div className="container mx-auto">
         <h2 className="text-4xl text-center font-bold mb-12">Skills</h2>
@@ -26,7 +28,7 @@ function Skills() {
                 transition={{ delay: 0.2 }}
                 className="flex items-center mb-4"
               >
-                <FaCheck className="mr-2 text-green-500" />
+                <IoLogoJavascript className="mr-2 text-yellow-500" />
                 JavaScript
               </motion.li>
               <motion.li
@@ -35,7 +37,7 @@ function Skills() {
                 transition={{ delay: 0.3 }}
                 className="flex items-center mb-4"
               >
-                <FaCheck className="mr-2 text-green-500" />
+                <FaReact className="mr-2 text-blue-500" />
                 React
               </motion.li>
               <motion.li
@@ -44,7 +46,7 @@ function Skills() {
                 transition={{ delay: 0.4 }}
                 className="flex items-center mb-4"
               >
-                <FaCheck className="mr-2 text-green-500" />
+                <FaNodeJs className="mr-2 text-green-500" />
                 Node.js
               </motion.li>
               <motion.li
@@ -53,8 +55,8 @@ function Skills() {
                 transition={{ delay: 0.5 }}
                 className="flex items-center mb-4"
               >
-                <FaCheck className="mr-2 text-green-500" />
-                HTML/CSS
+                <FaHtml5 className="mr-2 text-orange-500" />
+                HTML
               </motion.li>
               <motion.li
                 initial={{ x: -20, opacity: 0 }}
@@ -62,7 +64,16 @@ function Skills() {
                 transition={{ delay: 0.6 }}
                 className="flex items-center mb-4"
               >
-                <FaCheck className="mr-2 text-green-500" />
+                <FaCss3Alt className="mr-2 text-blue-500" />
+                CSS
+              </motion.li>
+              <motion.li
+                initial={{ x: -20, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.7 }}
+                className="flex items-center mb-4"
+              >
+                <FaGitAlt className="mr-2 text-orange-500" />
                 Git
               </motion.li>
             </ul>
@@ -80,7 +91,7 @@ function Skills() {
                 transition={{ delay: 0.2 }}
                 className="flex items-center mb-4"
               >
-                <FaCheck className="mr-2 text-green-500" />
+                <FiMessageCircle className="mr-2 text-green-500" />
                 Communication
               </motion.li>
               <motion.li
@@ -89,7 +100,7 @@ function Skills() {
                 transition={{ delay: 0.3 }}
                 className="flex items-center mb-4"
               >
-                <FaCheck className="mr-2 text-green-500" />
+                <FiUsers className="mr-2 text-green-500" />
                 Teamwork
               </motion.li>
               <motion.li
@@ -98,7 +109,7 @@ function Skills() {
                 transition={{ delay: 0.4 }}
                 className="flex items-center mb-4"
               >
-                <FaCheck className="mr-2 text-green-500" />
+                <FiSettings className="mr-2 text-green-500" />
                 Problem-solving
               </motion.li>
             </ul>
